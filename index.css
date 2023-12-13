@@ -1,0 +1,38 @@
+/* .webmain {
+    width: 80%;
+    margin: 0 auto;
+} */
+
+.webmain .webtop {
+    /* width: 90%; */
+    margin: auto;
+    margin-top: 30px;
+    font-size: 30px;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+        color: rgb(153, 15, 23);
+    }
+}
+
+.webmain .diver {
+    width: 100%;
+    border: 1px solid rgb(153, 15, 23);
+    margin-bottom: 30px;
+}
+
+.webmain li {
+    list-style: none;
+}
+/* 标题下面的内容 */
+.webmain .swp {
+    width: 90%;
+     
+}
+
+.webmain .yaowen {
+    &:hover {
+        color: rgb(211, 10, 34);
+    }
+}

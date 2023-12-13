@@ -1,0 +1,226 @@
+<!--
+ * @Author: 代凯祥
+ * @Date: 2023-12-13 10:10:41
+ * @LastEditors: 代凯祥
+ * @LastEditTime: 2023-12-13 17:15:14
+ * @FilePath: \mw_scsy_web_webPortal\components\head.html
+ * @Description: 
+-->
+<!DOCTYPE html>
+<html>
+<style type="text/css">
+    /*简单的思路就是
+        1.先初始化所有元素
+        2.给div标签大小和背景色
+        3.给左右li标签大小,并float:left
+        4.隐藏二级列表
+        5.控制一级显示二级列表
+        6.设置一些背景色和hover变色
+        7.a标签取消下划线,列表取消样式
+        */
+    * {
+        margin: 0px;
+        padding: 0px;
+    }
+
+    #nav_box {
+        width: auto; 
+        background-color: rgb(180, 31, 35); 
+    }
+
+    #nav {
+        width: 80%; 
+        margin: 0px;
+        padding: 0px;
+        display: flex;
+        margin: 0 auto;
+        justify-content: space-around; 
+
+    }
+
+    #nav li {
+        height: 36px; 
+        line-height:36px;
+        list-style: none;
+        text-align: center;
+        z-index:999
+
+    }
+
+    #nav .nav-ul {
+        display: none;
+    }
+
+    #nav li:hover {
+        background-color: rgb(163, 6, 11);
+    }
+
+    #nav a {
+        color: white; 
+        text-decoration: none;
+        padding: 0 10px;
+    }
+
+    #nav li ul {
+        display: none;
+    }
+
+    #nav li ul li {
+        background-color: rgb(187, 52, 56); 
+
+    }
+
+    #nav li:hover ul {
+        display: block;
+        z-index:999
+
+    }
+
+    #nav li ul li:hover {
+        /* display: block; */
+
+        background: rgb(174, 34, 39);
+    }
+
+    #input_box {
+        width: 17rem;
+        display: 'flex';
+        justify-content: center;
+        height: 80%;
+        margin:5px 0 0 0;
+
+        background-color: rgba(255, 255, 255, 0.3);
+        border-radius: 30px;
+        color: white;
+    }
+
+    #input {
+        width: 13rem;
+        background-color: transparent;
+        color: white;
+        border: 0;
+        border-top-left-radius: 30px;
+        border-bottom-left-radius: 30px;
+        padding-left: 10px;
+        font-size: 14px;
+    }
+
+    .enabled {
+        border: none;
+        padding: 2px 12px;
+        font-size: 14px;
+        line-height: 1.5;
+        background-color: #fff;
+        border-bottom: 1px solid #ccc;
+        outline: none;
+    }
+
+    #input::placeholder {
+        color: #ffffff;
+        /* 设置placeholder颜色 */
+    }
+
+    div.first_img img:first-child {
+        width: 100%;
+        height: 27%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    div.first_img img:nth-child(2) {
+        position: absolute;
+        left: 50%;
+        top:0;
+        transform: translate(-65%, 20px);
+        width: 30vw;
+        height: 20vh;
+    }
+</style>
+
+<head>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("button").click(function () {
+                $("p").hide();
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <div class="first_img">
+        <img src='/assets/bg3.png' alt="" />
+        <!-- <img src='http://scsy.miwei008.com//Uploads/20231205/656ed7b780581.png' alt="" /> -->
+        <!-- <img  src={require("@/assets/logo2.png")} alt="" id="img_2"/> -->
+        <img src='/assets/logo2.png' alt="" />
+    </div>
+
+    
+    <div id="nav_box">
+        <ul id="nav">
+            <li><a href="#">首页</a></li>
+            <li><a href="#">学院概况</a>
+                <ul class="nav-ul">
+                    <li><a href="#">学院简介</a></li>
+                    <li><a href="#">现任领导</a></li>
+                    <li><a href="#">机构设置</a></li>
+                    <li><a href="#">校园风光</a></li>
+                    <li><a href="#">地理位置</a></li>
+                </ul>
+            </li>
+            <li><a href="#">新闻中心</a>
+                <ul class="nav-ul">
+                    <li><a href="#">通知公告</a></li>
+                    <li><a href="#">社院动态</a></li>
+                </ul>
+            </li>
+            <li><a href="#">教学培训</a>
+                <ul class="nav-ul">
+                    <li><a href="#">教培动态</a></li>
+                    <li><a href="#">学员心声</a></li>
+                    <li><a href="#">师资情况</a></li>
+                    <li><a href="#">教学基地</a></li>
+                </ul>
+            </li>
+            <li><a href="#">科研智库
+                </a>
+                <ul class="nav-ul">
+                    <li><a href="#">科研动态</a></li>
+                    <li><a href="#">科研管理</a></li>
+                    <li><a href="#">科研成果</a></li>
+                    <li><a href="#">社院学报</a></li>
+                    <li><a href="#">社院智汇</a></li>
+                </ul>
+            </li>
+            <li><a href="#">中华文化学院</a>
+                <ul class="nav-ul">
+                    <li><a href="#">文化交流</a></li>
+                    <li><a href="#">同心书画院</a></li>
+                </ul>
+            </li>
+            <li><a href="#">民营企业家学院</a>
+                <ul class="nav-ul">
+                    <li><a href="#">学院简介</a></li>
+                    <li><a href="#">民营经济</a></li>
+                </ul>
+            </li>
+            <li><a href="#">机关党建</a>
+                <ul class="nav-ul">
+                    <li><a href="#">党建工作</a></li>
+                    <li><a href="#">支部建设</a></li>
+                    <li><a href="#">群团工作</a></li>
+                </ul>
+            </li>
+            <div id="input_box">
+                <input type="text" placeholder='请输入搜索内容' id="input" class="enabled text-info" />
+                丨<span style='cursor:pointer'><i class="fa fa-search" aria-hidden="true"></i>
+                </span>
+            </div>
+        </ul>
+    </div>
+</body>
+
+</html>
