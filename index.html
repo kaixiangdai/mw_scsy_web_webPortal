@@ -2,7 +2,7 @@
  * @Author: 代凯祥
  * @Date: 2023-12-13 10:10:41
  * @LastEditors: 代凯祥
- * @LastEditTime: 2023-12-13 17:14:03
+ * @LastEditTime: 2023-12-13 19:57:26
  * @FilePath: \mw_scsy_web_webPortal\index.html
  * @Description: 
 -->
@@ -16,35 +16,34 @@
     <meta name="keywords" content="" />
     <title>首页</title>
     <link rel="stylesheet" href="index.css">
-    <!-- <link rel="stylesheet/less" href='index.less'> -->
-    <!-- <script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js'></script> -->
-
-    <!-- <link rel="stylesheet" type="text/css" href="css/common.css"/>
-    <link rel="stylesheet" type="text/css" href="css/join_investment_details.css"/> -->
-    <!-- <link rel="stylesheet" type="text/css" href="css/bootstrap.min.css"/> -->
-    <!-- <script src="js/jquery.min.js" type="text/javascript" charset="utf-8"></script> -->
+    <!-- 引入react核心库 -->
+    <!-- <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script> 
+    <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script> 
+    <script src="https://cdn.staticfile.org/babel-standalone/6.26.0/babel.min.js"></script> -->
 
     <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
     <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="dist/css/swiper.min.css">
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/dayjs/1.11.5/dayjs.min.js"
         integrity="sha512-Ot7ArUEhJDU0cwoBNNnWe487kjL5wAOsIYig8llY/l0P2TUFwgsAHVmrZMHsT8NGo+HwkjTJsNErS6QqIkBxDw=="
-        crossorigin="anonymous" referrerpolicy="no-referrer"></script>
-
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+        </script>
+    <style>
+        /* //设置轮播图的大小 */
+        .swiper {
+            width: 600px;
+            height: 300px;
+        }
+    </style>
 </head>
 
 <body>
     <!--通用顶部导航-->
     <div id="head"></div>
-    <!-- <div class="container-fluid">
-        <div><button type="button" class="btn btn-primary btn-lg btn-block active" onclick="location=''">我要出租汽车</button>
-        </div>
-        <div><button type="button" class="btn btn-primary btn-lg btn-block" disabled="disabled"
-                onclick="location=''">我要租赁汽车</button></div>
-    </div> -->
 
-    <section class="webmain" >
+    <section class="webmain">
         <div class="container">
             <div class="row">
                 <div class="col-md-12">
@@ -61,10 +60,35 @@
                 <div class="diver">
                 </div>
             </div>
+
+            <!-- <div id="example"></div>
+            <script type="text/babel">
+                function Demo() { return <Button> 我是函数式编程</Button>; }
+                //此处的d必须大写,在下面的render里面必须闭合
+                ReactDOM.render(<Demo />, document.getElementById("example"));
+            </script> -->
             <!-- 轮播 -->
             <div className="swp">
                 <div className="swp-left">
-
+                    <div class="swiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide">
+                                <!-- //在这里面写你需要的img标签 -->
+                                <img src="https://s10.mogucdn.com/mlcdn/c45406/180926_45fkj8ifdj4l824l42dgf9hd0h495_750x390.jpg"
+                                    alt="">
+                            </div>
+                            <div class="swiper-slide"> <img
+                                    src="https://s10.mogucdn.com/mlcdn/c45406/180926_31eb9h75jc217k7iej24i2dd0jba3_750x390.jpg"
+                                    alt=""></div>
+                            <div class="swiper-slide"><img
+                                    src="https://s10.mogucdn.com/mlcdn/c45406/180919_3f62ijgkj656k2lj03dh0di4iflea_750x390.jpg"
+                                    alt=""></div>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-prev"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-scrollbar"></div>
+                    </div>
                 </div>
                 <div class="swp-right">
                     <div style="border-bottom: 2px solid #f5f1ec;">
@@ -81,8 +105,6 @@
                                 style="font-size: 16px; text-align: left; color: #555555; display: flex; padding-top: 7px; padding-bottom: 7px; border-bottom: 2px solid #f5f1ec;">
                                 <div style="position: relative;width: 50px;font-size: 11px;color: white;">
                                     <img src="/assets/ii5.png" alt="" width="50" height="55" />
-
-
                                     <span
                                         style="position: absolute; top: 7px; left: 50%; transform: translate(-50%,0px);">
                                         04
@@ -111,33 +133,42 @@
                 </div>
             </div>
         </div>
+        <!-- 回到顶部按钮 -->
+        <div class="back-top">
+            <div style="	position: absolute;
+            width: 15rpx;
+            height: 15rpx;
+            border-top: 4rpx solid #333;
+            border-right: 4rpx solid #333;
+            transform:rotate(-45deg);
+        "> </div>
+            <a href="#" onclick="">顶部</a>
+        </div>
     </section>
+
+    <script src="dist/js/swiper.min.js"></script>
+    <script>
+        var mySwiper = new Swiper('.swiper', {
+            direction: 'vertical', // 垂直切换选项
+            loop: true, // 循环模式选项
+
+            // 如果需要分页器
+            pagination: {
+                el: '.swiper-pagination',
+            },
+
+            // 如果需要前进后退按钮
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+
+            // 如果需要滚动条
+            scrollbar: {
+                el: '.swiper-scrollbar',
+            },
+        })        
+    </script>
 </body>
-<script type="text/javascript">
-    const items = [
-        {
-            date: "1698740149",
-            title: "【时政要闻】中共中央政治局召开会议 习近平主持会议",
-        },
-        {
-            date: "1758740949",
-            title: "【学院要闻】“习近平文化思想与统一战线”学术研讨会在四川社院召开",
-        },
-        {
-            date: "1248740749",
-            title: "【学院要闻】四川省社会主义学院与成都信息工程大学签署战略合作协议",
-        },
-        { date: "1158740149", title: "【四川要闻】中共四川省委十二届四次全会公报" },
-        {
-            date: "1698740349",
-            title:
-                "【时政要闻】王晓晖主持召开省委主题教育领导小组会议强调：把握实的要求、拿出实的举措，切实把主题教育抓出高质量好效果",
-        },
-    ];
-    $('#head').load('components/head.html')
-
-
-    console.log(dayjs().format('YYYY-MM-DD HH:mm'))
-</script>
 
 </html>
