@@ -60,10 +60,11 @@
     background-color: rgb(255, 250, 238);
     padding: 20px 0px 0px 0px;
     height:500px;
+    margin-bottom: 30px;
 }
 
 .swp-left {
-    width: 45%;
+    width: 100%;
     background-color: rgb(10, 10, 9);
 }
 
@@ -72,8 +73,9 @@
     height: 300px;
 } */
 .swp-right {
-    width: 45%;
-    height: 450px;
+    /* width: 45%; */
+    margin-left: 20px;
+    height: 480px;
     overflow-y: hidden;
     /* overflow-y: scroll; */
 }
