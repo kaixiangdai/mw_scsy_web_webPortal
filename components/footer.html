@@ -2,7 +2,7 @@
  * @Author: 代凯祥
  * @Date: 2023-12-13 10:10:41
  * @LastEditors: 代凯祥
- * @LastEditTime: 2023-12-14 17:34:26
+ * @LastEditTime: 2023-12-14 19:52:29
  * @FilePath: \mw_scsy_web_webPortal\components\footer.html
  * @Description: 
 -->
@@ -23,36 +23,26 @@
     <script>
 
     </script>
-    <style>
-        .footer {
-            height: 228px;
-            width: 100%;
-            padding-top: 91px;
-            background-repeat: no-repeat;
-            background-size: 100%;
-            background-image: url('http://www.scsy.org.cn/img/scsy-bottom.png');
-        }
+    <style> 
     </style>
 </head>
 
-<body>
-    <div class="footer">
-        <div class="foot-bg">
-            <div style="display: flex;justify-content: center;">
-                <span style="color: white; font-size: 12px; text-align: center;">
+<body> 
+    <footer class="panel-footer"
+        style="width: 100%; position: relative;height: 20vh; overflow: hidden;background-image: url('http://www.scsy.org.cn/img/scsy-bottom.png'); padding: 20px 0; ">
+        <div style="position: absolute;width: 100%; bottom: 10px; left:50%;transform: translateX(-50%);">
+            <div style=" text-align: center; ">
+                <p style="color: white; font-size: 12px;  ">
                     ©2007-2022 & 四川省社会主义学院 & 四川省中华文化学院 地址：四川省成都市金牛区盛达街12号
-                </span> 
-            </div> 
-            <div   style="display: flex;justify-content: center;">
+                </p>
+            </div>
+            <div class="row" style="text-align: center;">
                 <span style="color: rgb(8, 8, 8); font-size: 12px; text-align: center;margin-top: 20px;">
                     《中华人民共和国电信与信息服务业经营许可证》 编号：蜀ICP备2022016296号-1</span>
-
-            </div> 
-
-
+            </div>
         </div>
-    </div>
 
+    </footer>
 
 </body>
 

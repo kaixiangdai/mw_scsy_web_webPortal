@@ -34,7 +34,7 @@
 }
 
 .back-top {
-    position: sticky; 
+    position: sticky;
     bottom: 20%;
     height: 0px;
     float: right;
@@ -54,52 +54,42 @@
     color: 'rgb(171,15,14)';
 }
 
-.swp {
-    display: flex;
-    justify-content: space-around;
+.light {
+    /* display: flex; */
+    /* justify-content: space-around; */
     background-color: rgb(255, 250, 238);
     padding: 20px 0px 0px 0px;
-    height:500px;
+    height: 500px;
     margin-bottom: 30px;
 }
 
-.swp-left {
-    width: 100%; 
-}
-
-.swiper-container{
-    width: 500px;
-    height: 300px;
-}
-.swp-right { 
-    height: 480px; 
-}
-
-.swp .row_icon { 
-    color:white;
+.light .row_icon {
+    color: white;
     position: relative;
 }
-.swp .row_icon img{
+
+.light .row_icon img {
     width: 44px;
     height: 55px;
     position: relative;
 }
-.swp-right .imgbox1 {
-    font-size:20px;
+
+.row_icon .imgbox1 {
+    font-size: 20px;
     position: absolute;
-    left:28px;
-    top:10px
+    left: 28px;
+    top: 10px
 }
 
-.swp-right .imgbox2 {
+.row_icon .imgbox2 {
     font-size: 11px;
     position: absolute;
-    left:18px;
-    top:40px
+    left: 18px;
+    top: 40px
 }
 
 
-.swp .yaowen {
+.light_yaowen {
     &:hover {
         color: rgb(211, 10, 34);
     }
