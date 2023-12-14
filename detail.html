@@ -2,7 +2,7 @@
  * @Author: 代凯祥
  * @Date: 2023-12-14 10:39:40
  * @LastEditors: 代凯祥
- * @LastEditTime: 2023-12-14 11:47:48
+ * @LastEditTime: 2023-12-14 14:04:10
  * @FilePath: \mw_scsy_web_webPortal\detail.html
  * @Description: 
 -->
@@ -18,9 +18,9 @@
     <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
     <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
     <style>
-        body {
+        /* body {
             background-color: #f9f9fa
-        }
+        } */
 
         @media (min-width:992px) {
             .page-container {
@@ -73,7 +73,7 @@
             background: #fff;
             border-width: 0;
             border-radius: .25rem;
-            box-shadow: 0 1px 3px rgba(0, 0, 0, .05);
+            /* box-shadow: 0 1px 3px rgba(0, 0, 0, .05); */
             margin-bottom: 1.5rem
         }
 
@@ -103,7 +103,7 @@
 
         .tl-item.active .tl-dot:before {
             border-color: rgb(185, 33, 37);
-            box-shadow: 0 0 0 4px rgba(185,33,37, .2)
+            box-shadow: 0 0 0 4px rgba(185, 33, 37, .2)
         }
 
         .tl-item:last-child .tl-dot:after {
@@ -116,7 +116,7 @@
             width: 8px;
             height: 8px;
             border-radius: 50%;
-            box-shadow: 0 0 0 4px rgba(185,33,37, .2)
+            box-shadow: 0 0 0 4px rgba(185, 33, 37, .2)
         }
 
         .tl-dot {
@@ -188,6 +188,15 @@
 
         .tl-content p:last-child {
             margin-bottom: 0
+        }
+
+        .tl-content {
+            width: 100%;
+        }
+
+        .tl-content-underline {
+            /* width: 100%; */
+            border-bottom: 2px solid rgb(245, 241, 236);
         }
 
         .tl-date {
@@ -276,37 +285,50 @@
                             4. 有依法缴纳税收和社会保障资金的良好记录；</div>
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <!-- <div id="timeLine"></div> -->
+                <div class="col-md-3"> 
                     <div class="page-content page-container" id="page-content">
                         <div class="padding">
-                            <div class="row">
-
+                            <div class="row"> 
                                 <div>
                                     <!-- <p>Basic Timeline</p> -->
                                     <div class="timeline p-4 block mb-4">
                                         <div class="tl-item active">
                                             <div class="tl-dot b-gray"></div>
                                             <div class="tl-content">
-                                                <div class="">最新更新</div>
-                                              
+                                                <div class="tl-content-underline">
+                                                    <span
+                                                        style="color: rgb(217,0,27);font-size: 20px; text-decoration: underline; text-underline-offset: 6px;">最新更新
+                                                    </span>
+                                                </div>
+
                                             </div>
                                         </div>
                                         <div class="tl-item">
                                             <div class="tl-dot b-gray"></div>
                                             <div class="tl-content">
-                                                <div class="">【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话</div>
-                                                <div class="tl-date text-muted mt-1">2023 12 13</div>
+                                                <div class="tl-content-underline">
+                                                    <div class="" 
+                                                    style='overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                    white-space: nowrap;'>【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话</div>
+                                                    <div class="tl-date  mt-1" style="color: rgb(217,0,27)">2023 12 13
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
                                         <div class="tl-item">
                                             <div class="tl-dot b-gray"></div>
                                             <div class="tl-content">
-                                                <div class="">【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话</div>
-                                                <div class="tl-date text-muted mt-1">2023 12 13</div>
+                                                <div class="tl-content-underline ">
+                                                    <div class="" style='overflow: hidden;
+                                                    text-overflow: ellipsis;
+                                                    white-space: nowrap;'>【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话</div>
+                                                    <div class="tl-date  mt-1" style="color: rgb(217,0,27)">2023 12 13
+                                                    </div>
+                                                </div>
                                             </div>
                                         </div>
-                                        
+
                                         <div class="tl-item">
                                             <div class=" b-gray"></div>
                                         </div>
