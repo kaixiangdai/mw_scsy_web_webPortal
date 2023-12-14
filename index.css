@@ -34,8 +34,8 @@
 }
 
 .back-top {
-    position: sticky;
-    top: 500px;
+    position: sticky; 
+    bottom: 20%;
     height: 0px;
     float: right;
     right: 50px;
@@ -64,25 +64,18 @@
 }
 
 .swp-left {
-    width: 100%;
-    background-color: rgb(10, 10, 9);
+    width: 100%; 
 }
 
-/* .swiper-container{
+.swiper-container{
     width: 500px;
     height: 300px;
-} */
-.swp-right {
-    /* width: 45%; */
-    margin-left: 20px;
-    height: 480px;
-    overflow-y: hidden;
-    /* overflow-y: scroll; */
+}
+.swp-right { 
+    height: 480px; 
 }
 
-.swp .row_icon {
-    /* width: 55px;
-    height: 55px; */
+.swp .row_icon { 
     color:white;
     position: relative;
 }

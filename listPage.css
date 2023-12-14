@@ -1,0 +1,22 @@
+.listPage .container {
+  margin-top: 40px;
+}
+
+/* 分页 */
+/* .listPage .pagination{ 
+  border: 1px solid rgb(180,31,35);
+    
+}
+.listPage .pagination list{ 
+  border: 1px solid rgb(180,31,35);
+} */
+.listPage .pagination li>a {
+  border: 1px solid rgb(180, 31, 35);
+  color: rgb(180, 31, 35);
+}
+.listPage .pagination .moren{
+ 
+ background-color:  rgb(180, 31, 35) !important;
+ color: rgb(255, 255, 255);
+
+}
