@@ -29,14 +29,8 @@
 
 /* 标题下面的内容 */
 .webmain .swp {
-    width: 90%;
+    width: 100%;
 
-}
-
-.webmain .yaowen {
-    &:hover {
-        color: rgb(211, 10, 34);
-    }
 }
 
 .back-top {
@@ -60,3 +54,58 @@
     color: 'rgb(171,15,14)';
 }
 
+.swp {
+    display: flex;
+    justify-content: space-around;
+    background-color: rgb(255, 250, 238);
+    padding: 20px 0px 0px 0px;
+    height:500px;
+}
+
+.swp-left {
+    width: 45%;
+    background-color: rgb(10, 10, 9);
+}
+
+/* .swiper-container{
+    width: 500px;
+    height: 300px;
+} */
+.swp-right {
+    width: 45%;
+    height: 450px;
+    overflow-y: hidden;
+    /* overflow-y: scroll; */
+}
+
+.swp .row_icon {
+    /* width: 55px;
+    height: 55px; */
+    color:white;
+    position: relative;
+}
+.swp .row_icon img{
+    width: 44px;
+    height: 55px;
+    position: relative;
+}
+.swp-right .imgbox1 {
+    font-size:20px;
+    position: absolute;
+    left:28px;
+    top:10px
+}
+
+.swp-right .imgbox2 {
+    font-size: 11px;
+    position: absolute;
+    left:18px;
+    top:40px
+}
+
+
+.swp .yaowen {
+    &:hover {
+        color: rgb(211, 10, 34);
+    }
+}
