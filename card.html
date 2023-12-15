@@ -2,7 +2,7 @@
  * @Author: 代凯祥
  * @Date: 2023-12-14 18:50:59
  * @LastEditors: 代凯祥
- * @LastEditTime: 2023-12-14 19:37:05
+ * @LastEditTime: 2023-12-15 11:11:31
  * @FilePath: \mw_scsy_web_webPortal\card.html
  * @Description: 卡片
 -->
@@ -12,13 +12,75 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>卡片</title>
   <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
   <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
   <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
   <style>
+    .sidenav {
+      /* position: fixed; */
+      z-index: 1;
+      left: 16%;
+      overflow-x: hidden;
+      padding-top: 20px;
+      padding-right: 20px;
+    }
+
+    .sidenav ul li {
+      text-align: center;
+      cursor: pointer;
+    }
+
+    .sidenav ul li:nth-child(1) {
+      text-align: center;
+      object-fit: cover;
+      background-image: url('http://www.scsy.org.cn/img//scsy-tc.png');
+      background: url('http://www.scsy.org.cn/img//scsy-tc.png') no-repeat center/cover;
+      background-color: #b92f33;
+      height: 80px;
+      line-height: 80px;
+      margin-top: -6px;
+
+    }
+
+    .sidelist {
+      border: 1px solid rgb(230, 230, 230);
+      padding: 5px 20px;
+    }
+
+    .sidelist:hover {
+      background-color: rgb(230, 230, 230);
+    }
+
+    .sidenav ul li:nth-child(1) {
+      color: white;
+    }
+
+    .sidenav ul li a {
+      color: rgb(0, 0, 0);
+    }
+
+    /* .sidenav a {
+      padding: 6px 8px 6px 16px;
+      text-decoration: none;
+      font-size: 25px;
+      color: #818181;
+      display: block;
+    }
+
+ 
+ */
 
 
+    @media screen and (max-height: 450px) {
+      .sidenav {
+        padding-top: 15px;
+      }
+
+      .sidenav a {
+        font-size: 18px;
+      }
+    }
   </style>
 </head>
 
@@ -28,8 +90,21 @@
     <div id="head"></div>
     <div class="container">
       <div class="row" style="margin-top: 20px;">
-        <div class="col-md-2" style="padding-left: 0px;  
-      padding-right: 10px;">
+        <div class="col-md-2" style="padding-left: 5px;  
+      padding-right: 0px;">
+          <div class="sidenav">
+            <ul>
+              <li onclick='location.href=("/detail.html")'>
+                <div>民营企业家学院</div>
+              </li>
+              <li class="sidelist" onclick='location.href=("/detail.html")'>
+                <div>学院简介</a>
+              </li>
+              <li class="sidelist" onclick='location.href=("/detail.html")'>
+                <div>民营企业</a>
+              </li>
+            </ul>
+          </div>
 
         </div>
         <!-- 党建工作 -->
@@ -65,40 +140,35 @@
             </div>
           </div>
         </div>
+        <!-- 党建工作 -->
         <div class="col-md-5" style="padding-left: 0px;  
        padding-right: 10px;">
           <div
-            style=" height: 560px; box-shadow: 2px 2px 5px 1px rgba(150, 150, 150, 0.3); padding: 10px; padding-left: 0; padding-right: 0; font-size: 16px;border-top: 2px solid rgb(248, 14, 21);">
-            <div style="color: rgb(211, 10, 34)">
+            style=" height: 360px; box-shadow: 2px 2px 5px 1px rgba(150, 150, 150, 0.3); padding: 10px; padding-left: 0; padding-right: 0; font-size: 16px;border-top: 2px solid rgb(248, 14, 21);">
+            <div>
               <div
                 style="display: flex; justify-content: space-between; border-bottom: 2px solid #f5f1ec; padding-right: 10px">
                 <div
-                  style="border-bottom: 2px solid rgb(211, 10, 34); font-size: 18px; padding-left: 8px; padding-right: 8px; padding-bottom: 5px;">
+                  style="border-bottom: 2px solid rgb(211, 10, 34); color: rgb(211, 10, 34); font-size: 18px; padding-left: 8px; padding-right: 8px; padding-bottom: 5px;">
                   党建工作
                 </div>
                 <div style="cursor: pointer ;font-size: 14px;" onclick='location.href=("/detail.html")'>
                   更多&gt;&gt;</div>
               </div>
-              <img src='http://scsy.miwei008.com/Uploads/20231027/653b1fa51d5f4.jpg' alt=""
-                style="width: 100%; height: 150px; object-fit: cover;" />
+
               <div style="padding-left: 10px; padding-right: 10px">
-                <ul style="overflow-y: hidden;">
-                  <li onclick='location.href=("/detail.html")'
-                    style="font-size: 16px; text-align: left; color: #555555; display: flex; padding-top: 7px; padding-bottom: 7px; border-bottom: 2px solid #f5f1ec;">
-                    <div class="yaowen" style="display: flex;align-items: center;">
-                      <div style="height: 100%; width: 25px;">
-                        <div
-                          style="margin-top: 0px; background-color: rgb(229, 1, 12); color: white; border-radius: 50%; width: 23px; height: 23px; text-align: center; line-height: 2.rem; font-size: 17px">
-                          01
-                        </div>
-                      </div>
-                      <div
-                        style="cursor: pointer; line-height: 1.6rem; overflow: hidden; text-overflow: ellipsis; word-wrap: break-word; display: -webkit-box; padding-left: 4px; -webkit-line-clamp: 2;-webkit-box-orient: vertical;">
-                        进修班第153期学员心声1
-                      </div>
-                    </div>
-                  </li>
-                </ul>
+                <div style=" border-bottom: 2px solid rgb(245, 241, 236);">
+                  <div style=' 
+                  margin: 10px 0;
+                  font-size: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;'>
+                    <span style="color: rgb(217,0,27);margin-right: 20px; font-size: 14px;">2023 12 13 </span>
+                    省社会主义学院召开学习贯彻习近平新时代中国特色社会主义思想主题教育总结会
+                  </div>
+
+                </div>
               </div>
             </div>
           </div>

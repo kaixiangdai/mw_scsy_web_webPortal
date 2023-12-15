@@ -2,7 +2,7 @@
  * @Author: 代凯祥
  * @Date: 2023-12-14 10:39:40
  * @LastEditors: 代凯祥
- * @LastEditTime: 2023-12-15 09:28:01
+ * @LastEditTime: 2023-12-15 10:26:16
  * @FilePath: \mw_scsy_web_webPortal\listPage.html
  * @Description:  文章页面,左侧是文章内容,右侧是时间轴
 -->
@@ -236,14 +236,45 @@
         .b-gray {
             border-color: rgb(187, 187, 187) !important;
         }
+
+        /* 分页样式 */
+        ul.pagination {
+            display: inline-block;
+            padding: 0;
+            margin: 0;
+        }
+
+        ul.pagination li {
+            display: inline;
+        }
+
+        ul.pagination li a {
+            color: black;
+            float: left;
+            padding: 8px 16px;
+            text-decoration: none;
+            transition: background-color .3s;
+            border: 1px solid #ddd;
+            margin: 0 4px;
+        }
+
+        ul.pagination li a.active {
+            background-color: rgba(217, 0, 27, 1);
+            color: white;
+            border: 1px solid rgba(217, 0, 27, 1);
+        }
+
+        ul.pagination li a:hover:not(.active) {
+            background-color: #ddd;
+        } 
     </style>
 </head>
 
 <body>
-    <div class="listPage"  >
+    <div class="listPage">
         <!--通用顶部导航-->
         <div id="head"></div>
-        <div class="container" style="min-height: 55vh;"> 
+        <div class="container" style="min-height: 55vh;">
             <div class="row">
                 <div class="col-md-9">
                     <div style="border-bottom: 2px solid rgb(245, 241, 236);padding:0 15px;">
@@ -260,25 +291,26 @@
                             font-size: 16px;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    white-space: nowrap;'> 
-                          <span style="color: rgb(217,0,27);margin-right: 20px; font-size: 14px;" >2023 12 13 </span>
-                          省社会主义学院召开学习贯彻习近平新时代中国特色社会主义思想主题教育总结会
-                        </div>
-                           
+                    white-space: nowrap;'>
+                                <span style="color: rgb(217,0,27);margin-right: 20px; font-size: 14px;">2023 12 13
+                                </span>
+                                省社会主义学院召开学习贯彻习近平新时代中国特色社会主义思想主题教育总结会
+                            </div>
+
                         </div>
                         <div style=" border-bottom: 2px solid rgb(245, 241, 236);">
                             <div style=' 
                             margin: 10px 0;
                     overflow: hidden;
                     text-overflow: ellipsis;
-                    white-space: nowrap;'> 
-                          <span style="color: rgb(217,0,27);margin-right: 20px;" >2023 12 13 </span>
-                            【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话
-                            【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话
-                            【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话
-                            【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话
-                        </div>
-                           
+                    white-space: nowrap;'>
+                                <span style="color: rgb(217,0,27);margin-right: 20px;">2023 12 13 </span>
+                                【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话
+                                【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话
+                                【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话
+                                【时政要闻】中央经济工作会议在北京举行 习近平发表重要讲话
+                            </div>
+
                         </div>
                     </div>
                 </div>
@@ -338,25 +370,26 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-12 " style="justify-content: center;display: flex;">
-                    <!-- <ul class="pagination ">
-                        <li><a href="#">上一页</a></li>
-                        <li class=' '><a href="#">1</a></li> 
-                        <li  class='moren' ><a href="#">2</a></li>
-                        <li><a href="#">下一页</a></li>
-                    </ul>  -->
-                    <ul class="pager">
-                        <li><a href="#">上一页</a></li>
-                        <li><a href="##">4</a></li>
-                        <li><a href="##">5</a></li>
-                        <li><a href="##">6</a></li>
-                        <li><a href="#">下一页</a></li>
-                     </ul>
+                <div class="col-lg-12" style="justify-content: center;display: flex;"> 
+                    <ul class="pagination">
+                        <li><a href="#">«</a></li>
+                        <li><a href="#">1</a></li>
+                        <li><a class="active" href="#">2</a></li>
+                        <li><a href="#">3</a></li>
+                        <li><a href="#">4</a></li>
+                        <li><a href="#">5</a></li>
+                        <li><a href="#">6</a></li>
+                        <li><a href="#">7</a></li>
+                        <li><a href="#">»</a></li>
+                    </ul>
+
                 </div>
             </div>
-             <!--通用底部导航-->
-     
+
+
+
         </div>
+        <!--通用底部导航-->
         <div id="footer"></div>
     </div>
     <script>
