@@ -2,7 +2,7 @@
  * @Author: 代凯祥
  * @Date: 2023-12-13 10:10:41
  * @LastEditors: 代凯祥
- * @LastEditTime: 2023-12-15 11:44:39
+ * @LastEditTime: 2023-12-19 14:56:32
  * @FilePath: \mw_scsy_web_webPortal\index.html
  * @Description: 
 -->
@@ -31,9 +31,20 @@
         crossorigin="anonymous" referrerpolicy="no-referrer">
         </script>
     <style>
-        .swiper {
+        /* .swiper {
             width: 100%;
             height: 110px;
+        } */
+        /* 小圆点的颜色 */
+        .swiper-pagination-bullet-active {
+            background-color: #fff !important;
+        }
+        .swiper-button-prev {
+            color: #fff !important;
+        }
+
+        .swiper-button-next {
+            color: #fff !important;
         }
     </style>
 </head>
@@ -62,44 +73,30 @@
 
             <div class="row light">
                 <div class="col-md-7">
-                    <div id="myCarousel" class="carousel slide">
-                        <!-- 轮播（Carousel）指标 -->
-                        <ol class="carousel-indicators">
-                            <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-                            <li data-target="#myCarousel" data-slide-to="1"></li>
-                            <li data-target="#myCarousel" data-slide-to="2"></li>
-                        </ol>
-                        <!-- 轮播（Carousel）项目 -->
-                        <div class="carousel-inner">
-                            <div class="item active">
-                                <img src="http://scsy.miwei008.com/Uploads/20231023/653634e177cc7.jpg"
-                                    alt="First slide">
-                                <div class="carousel-caption">习近平总书记和四川的故事
-                                </div>
+                    <!-- 轮播图 -->
+                    <div class="swiper2" style="width:100%;overflow: hidden;">
+                        <div class="swiper-wrapper" style=" width: 100%;
+                        height: 100%;
+                        position: relative;
+                        transition-duration: 25000ms;
+                        display: flex;">
+                            <div class="swiper-slide">
+                                <img style="width: 100%;height: 450px;"
+                                    src="http://scsy.miwei008.com/Uploads/20231207/6571a398353e4.jpg" alt="">
                             </div>
-                            <div class="item">
-                                <img src="http://scsy.miwei008.com/Uploads/20230928/651528e9a2320.JPG"
-                                    alt="Second slide">
-                                <div class="carousel-caption">四川省社会主义学院与四川师范大学签署合作协议暨同等学力申硕联合办学协议
-                                </div>
+                            <div class="swiper-slide">
+                                <img style="width: 100%;height: 450px;"
+                                    src="http://scsy.miwei008.com/Uploads/20230928/651528e9a2320.JPG" alt="">
                             </div>
-                            <div class="item">
-                                <img src="http://scsy.miwei008.com/Uploads/20231207/6571a398353e4.jpg"
-                                    alt="Third slide">
-                                <div class="carousel-caption">四川省社会主义学院与成都信息工程大学签署战略合作协议
-                                </div>
+                            <div class="swiper-slide">
+                                <img style="width: 100%;height: 450px;"
+                                    src="http://scsy.miwei008.com/Uploads/20230919/6509754ca012a.JPG" alt="">
                             </div>
                         </div>
-                        <!-- 轮播（Carousel）导航 -->
-                        <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev"
-                            style="display: flex;align-items: center;">
-                            <div style="font-size: 50px;"> &lt;</div>
+                        <div class="swiper-pagination"></div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
 
-                        </a>
-                        <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next"
-                            style="display: flex;align-items: center; justify-content: end;">
-                            <div style="font-size: 50px;"> &gt;</div>
-                        </a>
                     </div>
 
                 </div>
@@ -153,7 +150,8 @@
                                     style="border-bottom: 2px solid rgb(211, 10, 34); font-size: 18px; padding-left: 8px; padding-right: 8px; padding-bottom: 5px;">
                                     社院动态
                                 </div>
-                                <div style="cursor: pointer ;font-size: 14px;" onclick='location.href=("/listPage.html")'>
+                                <div style="cursor: pointer ;font-size: 14px;"
+                                    onclick='location.href=("/listPage.html")'>
                                     更多&gt;&gt;</div>
                             </div>
                             <!-- {sj.img?<img src={sj.img} alt="" style="width: 100%; height: 150px; object-fit: cover;" />:<></>} -->
@@ -191,7 +189,8 @@
                                     style="border-bottom: 2px solid rgb(211, 10, 34); font-size: 18px; padding-left: 8px; padding-right: 8px; padding-bottom: 5px;">
                                     教培动态
                                 </div>
-                                <div style="cursor: pointer ;font-size: 14px;" onclick='location.href=("/listPage.html")'>
+                                <div style="cursor: pointer ;font-size: 14px;"
+                                    onclick='location.href=("/listPage.html")'>
                                     更多&gt;&gt;</div>
                             </div>
                             <!-- {sj.img?<img src={sj.img} alt="" style="width: 100%; height: 150px; object-fit: cover;" />:<></>} -->
@@ -229,7 +228,8 @@
                                     style="border-bottom: 2px solid rgb(211, 10, 34); font-size: 18px; padding-left: 8px; padding-right: 8px; padding-bottom: 5px;">
                                     通知公告
                                 </div>
-                                <div style="cursor: pointer ;font-size: 14px;" onclick='location.href=("/listPage.html")'>
+                                <div style="cursor: pointer ;font-size: 14px;"
+                                    onclick='location.href=("/listPage.html")'>
                                     更多&gt;&gt;</div>
                             </div>
                             <div style="padding-left: 10px; padding-right: 10px">
@@ -294,7 +294,8 @@
                                     style="border-bottom: 2px solid rgb(211, 10, 34); font-size: 18px; padding-left: 8px; padding-right: 8px; padding-bottom: 5px;">
                                     科研动态
                                 </div>
-                                <div style="cursor: pointer ;font-size: 14px;" onclick='location.href=("/listPage.html")'>
+                                <div style="cursor: pointer ;font-size: 14px;"
+                                    onclick='location.href=("/listPage.html")'>
                                     更多&gt;&gt;</div>
                             </div>
                             <img src='http://scsy.miwei008.com/Uploads/20231027/653b1fa51d5f4.jpg' alt=""
@@ -333,7 +334,8 @@
                                     style="border-bottom: 2px solid rgb(211, 10, 34); font-size: 18px; padding-left: 8px; padding-right: 8px; padding-bottom: 5px;">
                                     党建工作
                                 </div>
-                                <div style="cursor: pointer ;font-size: 14px;" onclick='location.href=("/listPage.html")'>
+                                <div style="cursor: pointer ;font-size: 14px;"
+                                    onclick='location.href=("/listPage.html")'>
                                     更多&gt;&gt;</div>
                             </div>
                             <img src='http://scsy.miwei008.com/Uploads/20231027/653b1fa51d5f4.jpg' alt=""
@@ -372,7 +374,8 @@
                                     style="border-bottom: 2px solid rgb(211, 10, 34); font-size: 18px; padding-left: 8px; padding-right: 8px; padding-bottom: 5px;">
                                     学员心声
                                 </div>
-                                <div style="cursor: pointer ;font-size: 14px;" onclick='location.href=("/listPage.html")'>
+                                <div style="cursor: pointer ;font-size: 14px;"
+                                    onclick='location.href=("/listPage.html")'>
                                     更多&gt;&gt;</div>
                             </div>
                             <img src='http://scsy.miwei008.com/Uploads/20231116/6555df8312658.jpg' alt=""
@@ -404,8 +407,7 @@
             <!-- 图说社院 -->
             <div class="row">
                 <div class="col-md-12" style="padding :0 15px">
-                    <div
-                        style="  font-size: 16px;">
+                    <div style="  font-size: 16px;">
                         <div style="color: rgb(211, 10, 34); margin-bottom: 30px;">
                             <div
                                 style="display: flex; justify-content: space-between; border-bottom: 2px solid #f5f1ec; padding-right: 10px">
@@ -511,9 +513,9 @@
 
     </section>
     <!-- 回到顶部按钮 -->
-    <div class="back-top"> 
-        <img  alt="" src="http://www.scsy.org.cn/img/up.png" onclick="toTop()" style="cursor:pointer ;">
-         </div>
+    <div class="back-top">
+        <img alt="" src="http://www.scsy.org.cn/img/up.png" onclick="toTop()" style="cursor:pointer ;">
+    </div>
     <div id="footer"></div>
     <script>
         $('#head').load('components/head.html')
@@ -533,13 +535,31 @@
             document.body.scrollTop = 0;
             document.documentElement.scrollTop = 0;
         }
-        const swiper = new Swiper('.swiper', {
-            loop: true,
-            loopedSlides: 10,
-            slidesPerView: 5,
-            centeredSlides: true,
-            // spaceBetween: 5,
-            // 如果需要前进后退按钮
+        // const swiper = new Swiper('.swiper', {
+        //     loop: true,
+        //     loopedSlides: 10,
+        //     slidesPerView: 5,
+        //     centeredSlides: true,
+        //     // spaceBetween: 5,
+        //     // 如果需要前进后退按钮
+        //     navigation: {
+        //         nextEl: ".swiper-button-next",
+        //         prevEl: ".swiper-button-prev",
+        //     },
+        // });
+        const swiperLeft = new Swiper('.swiper2', {
+            slidesPerView: 1,
+            spaceBetween: 20,
+            loop: true, // 循环模式选项
+            autoplay: {
+                delay: 2000,
+                disableOnInteraction: false,
+            },
+            // 分页器
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
             navigation: {
                 nextEl: ".swiper-button-next",
                 prevEl: ".swiper-button-prev",

@@ -1,0 +1,270 @@
+<!--
+ * @Author: 代凯祥
+ * @Date: 2023-12-13 10:10:41
+ * @LastEditors: 代凯祥
+ * @LastEditTime: 2023-12-21 15:25:43
+ * @FilePath: \mw_scsy_web_webPortal\components\head3.html
+ * @Description: 头部
+-->
+<!DOCTYPE html>
+<html>
+
+
+<head>
+    <link rel="stylesheet" href="https://cdn.staticfile.org/font-awesome/4.7.0/css/font-awesome.css">
+    <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+    <!-- <link rel="stylesheet" href="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/css/bootstrap.min.css">
+    <script src="https://cdn.staticfile.org/twitter-bootstrap/3.3.7/js/bootstrap.min.js"></script>   -->
+    
+    <script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js'></script>
+
+
+    <style type="text/css">
+        * {
+            margin: 0px;
+            padding: 0px;
+        }
+
+        div.first_img img:first-child {
+            width: 100%;
+            height: 27%;
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        div.first_img img:nth-child(2) {
+            z-index: 99;
+            width: 30%;
+            position: absolute;
+            left: 30%;
+            top: 20px;
+        }
+
+        li {
+            list-style: none;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .wrapper {
+            /* width: auto; */
+            width: 100vw;
+            background-color: rgb(180, 31, 35);
+        }
+
+        .nav {
+            /* 设置导航栏宽高，水平居中 */ 
+            
+            width: auto;
+            height: 36px;
+            margin: 0px;
+            padding: 0px;
+            display: flex;
+            margin: 0 auto;
+            justify-content: space-around;
+        }
+
+        .nav>li {
+            /* 左浮动，将li标签水平排列 */
+            height: 36px;
+            line-height: 36px;
+            list-style: none;
+            text-align: center;
+            float: left;
+        }
+
+        .nav li { 
+            /* margin: 0px 10px; */
+            min-width: 100px;
+            height: 36px;
+            line-height: 36px;
+            text-align: center;
+            background: rgb(174, 34, 39);
+
+        }
+
+        .nav>li a {
+            /* 设置字体颜色 */
+            color: white;
+        }
+
+        .nav>li {
+            min-width: 100px;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            /* 这个可能后面需要改一下规则 */
+        }
+
+        .thinav>li {
+            overflow: hidden;
+            white-space: nowrap;
+            text-overflow: ellipsis;
+        }
+
+        .nav li:hover {
+            /* 鼠标指向该位置时的背景颜色 */
+            background-color: crimson;
+        }
+
+      
+
+        .subnav {
+            /* 隐藏二级列表 */
+            display: none;
+        }
+
+        .nav li:hover>.subnav {
+            /* 鼠标指向该位置时二级列表出现 */
+            display: block;
+        }
+
+      
+        .subnav>li {
+            /* 先对二级列表的<li>标签定位 */
+            position: relative;
+        }
+
+        .subnav>li:hover>.thinav {
+            /* 鼠标在指定位置时三级列表出现 */
+            display: block;
+        }
+
+        .thinav {
+            /* 对三级列表定位并隐藏 */
+            position: absolute;
+            top: 0px;
+            left: 100px;
+            display: none;
+        }
+
+        #input_box {
+            width: 200px;
+            display: 'flex';
+            justify-content: center;
+            height: 26px;
+            margin: 5px 20px 0 0;
+            background-color: rgba(255, 255, 255, 0.3);
+            border-radius: 30px;
+            color: white;
+        }
+
+        #input {
+            width: 130px;
+            background-color: transparent;
+            color: white;
+            border: 0;
+            border-top-left-radius: 30px;
+            border-bottom-left-radius: 30px;
+            padding-left: 10px;
+            font-size: 14px;
+        }
+
+        .enabled {
+            border: none;
+            padding: 3px 12px 0 0;
+            font-size: 14px;
+            line-height: 1.5;
+            background-color: #fff;
+            border-bottom: 1px solid #ccc;
+            outline: none;
+        }
+
+        #input::placeholder {
+            color: #ffffff;
+            /* 设置placeholder颜色 */
+        }
+    </style>
+</head>
+
+<body>
+    <div class="first_img">
+        <img src='/assets/bg3.png' alt="" class="img-responsive center-block" />
+        <img src='/assets/logo2.png' alt="" class="img-responsive center-block" />
+    </div>
+
+    <div class="wrapper">
+        <ul class="nav">
+            <li><a href="/index.html">首页</a></li>
+            <li><a href="#">学院概况</a>
+                <ul class="subnav">
+                    <li><a href="#">学院简介</a></li>
+                    <li><a href="#">现任领导</a></li>
+                    <li><a href="#">机构设置</a></li>
+                    <li><a href="#">校园风光</a></li>
+                    <li><a href="#">地理位置</a></li>
+                    <li><a href="#">地理位置</a>
+                        <ul class="thinav">
+                            <li><a href="#">风雨哈佛路</a></li>
+                            <li><a href="#">肖申克的救赎</a></li>
+                            <li><a href="#">阿甘正传</a></li>
+                            <li><a href="#">当幸福来敲门</a></li>
+                            <li><a href="#">同心书画院民营企业家学院</a></li>
+
+                        </ul>
+
+                    </li>
+                </ul>
+            </li>
+            <li><a href="#">新闻中心</a>
+                <ul class="subnav">
+                    <li><a href="#">通知公告</a></li>
+                    <li><a href="#">社院动态</a></li>
+                </ul>
+            </li>
+            <li><a href="#">教学培训</a>
+                <ul class="subnav">
+                    <li><a href="#">教培动态</a></li>
+                    <li><a href="#">学员心声</a></li>
+                    <li><a href="#">师资情况</a></li>
+                    <li><a href="#">教学基地</a></li>
+                </ul>
+            </li>
+            <li><a href="#">科研智库
+                </a>
+                <ul class="subnav">
+                    <li><a href="#">科研动态</a></li>
+                    <li><a href="#">科研管理</a></li>
+                    <li><a href="#">科研成果</a></li>
+                    <li><a href="#">社院学报</a></li>
+                    <li><a href="#">社院智汇</a></li>
+                </ul>
+            </li>
+            <li><a href="#">中华文化学院</a>
+                <ul class="subnav">
+                    <li><a href="#">文化交流</a></li>
+                </ul>
+            </li>
+            <li><a href="#">民营企业家学院</a>
+                <ul class="subnav">
+                    <li><a href="#">学院简介</a></li>
+                    <li><a href="#">民营经济</a></li>
+                </ul>
+            </li>
+            <li><a href="#">机关党建</a>
+                <ul class="subnav">
+                    <li><a href="#">党建工作</a></li>
+                    <li><a href="#">支部建设</a></li>
+                    <li><a href="#">群团工作</a></li>
+                </ul>
+            </li>
+            <div id="input_box">
+                <input type="text" placeholder='请输入搜索内容' id="input" class="enabled text-info" />
+                丨 <svg style='cursor:pointer; vertical-align:middle ;margin-left: -5;margin-bottom: 4px;'
+                    t="1702610547853" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="1511" width="16" height="16">
+                    <path
+                        d="M884.48 849.92l-128-128a378.24 378.24 0 1 0-90.24 90.24l128 128a64 64 0 0 0 90.24-90.24zM275.2 682.24a247.68 247.68 0 1 1 350.72 0 248.32 248.32 0 0 1-350.72 0z"
+                        fill="#ffffff" p-id="1512"></path>
+                </svg></i>
+            </div>
+        </ul>
+    </div>
+    <div style="background-color: rebeccapurple; width: 100%;height: 300px;">
+
+    </div>
+</body>
+
+</html>

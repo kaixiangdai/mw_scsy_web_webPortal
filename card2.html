@@ -1,0 +1,270 @@
+<!--
+ * @Author: 代凯祥
+ * @Date: 2023-12-14 18:50:59
+ * @LastEditors: 代凯祥
+ * @LastEditTime: 2023-12-21 19:36:49
+ * @FilePath: \mw_scsy_web_webPortal\card2.html
+ * @Description: 卡片新,带有的是面包屑和二级收缩菜单
+-->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>卡片</title>
+  <link rel="stylesheet" href="http://cdn.bootcss.com/bootstrap/3.3.0/css/bootstrap.min.css">
+  <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+  <script src="http://cdn.bootcss.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
+  <style>
+    * {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    li {
+      list-style: none;
+      z-index: 22;
+    }
+
+    .page {
+      width: 100%;
+      height: 100%;
+    }
+
+    .card_flag_nav {
+      width: 160px;
+      box-shadow: 2px 2px 5px 1px rgba(150, 150, 150, 0.3);
+    }
+
+    .card_flag_nav_li .card_flag_active {
+      width: 160px;
+      height: auto;
+      color: rgb(217, 0, 55);
+      line-height: 40px;
+      background: rgb(255, 255, 255);
+      text-align: center;
+      font-size: 16px;
+      border-bottom: 1px solid rgb(217, 0, 55);
+      cursor: pointer;
+    }
+
+    .card_flag_nav_li {
+      width: 160px;
+      height: auto;
+      color: #000000;
+      line-height: 40px;
+      background: rgb(242, 242, 242);
+      text-align: center;
+      font-size: 16px;
+      border-bottom: 1px solid #FFF;
+      cursor: pointer;
+    }
+
+    .tit {
+      width: 160px;
+      height: 40px;
+    }
+
+    .card_flag_nav_li:hover ul {
+      display: block;
+    }
+
+    .card_flag_nav_li ul {
+      width: 160px;
+      height: auto;
+      background: #FFFFFF;
+      display: none;
+    }
+
+    .card_flag_nav_li ul li {
+      width: 160px;
+      height: 40px;
+      border-bottom: 1px dashed #666;
+      color: #333;
+      text-align: center;
+      line-height: 40px;
+      position: relative;
+    }
+
+    .card_flag_nav_li ul li:hover .list-3 {
+      display: block;
+    }
+
+    .list-3 {
+      width: 160px;
+      height: auto;
+      position: absolute;
+      left: 160px;
+      top: 0px;
+      display: none;
+      border-top: 1px solid #666;
+    }
+
+    .list-3Dom {
+      width: 160px;
+      height: 40px;
+      background: #ffffff;
+      border-bottom: 1px dashed #666;
+      border-right: 1px solid #666;
+      border-left: 1px solid #666;
+
+      color: #000000;
+      text-align: center;
+      line-height: 40px;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="cardPage">
+    <!--通用顶部导航-->
+    <div id="head"></div>
+    <div class="container card_flag">
+      <div class="row" style="margin-top: 20px;">
+        <div class="col-md-2" style="padding-left: 5px;  
+      padding-right: 10px;">
+          <div class="card_flag_nav">
+            <div class="card_flag_nav_li">
+              <div class="tit">一级目录</div>
+              <ul>
+                <li class="card_flag_active">
+                  二级栏目
+                  <div class="list-3">
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                  </div>
+                </li>
+                <li>
+                  二级栏目
+                  <div class="list-3">
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                  </div>
+                </li>
+                <li>
+                  二级栏目
+                  <div class="list-3">
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="card_flag_nav">
+            <div class="card_flag_nav_li">
+              <div class="tit">一级目录</div>
+              <ul>
+                <li class="card_flag_active">
+                  二级栏目
+                  <div class="list-3">
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                  </div>
+                </li>
+                <li>
+                  二级栏目
+                  <div class="list-3">
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                  </div>
+                </li>
+                <li>
+                  二级栏目
+                  <div class="list-3">
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                    <div class="list-3Dom">三级栏目</div>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <!-- <div class="panel-group" id="accordion">
+            <div class="panel panel-default">
+              <div class="panel-heading">
+                <p class="panel-title" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                  校园动态
+                </p>
+              </div>
+              <div id="collapseOne" class="panel-collapse collapse in">
+                <div class="panel-body">
+                  校园地址
+                </div>
+                <div class="panel-body">
+                  校园地址2
+                </div>
+              </div>
+            </div>
+          </div> -->
+
+        </div>
+        <!-- 党建工作 -->
+        <div class="col-md-10">
+          <div
+            style=" height: 360px; box-shadow: 2px 2px 5px 1px rgba(150, 150, 150, 0.3); padding: 10px; padding-left: 0; padding-right: 0; font-size: 16px;border-top: 2px solid rgb(248, 14, 21);">
+            <div>
+              <div
+                style="display: flex; justify-content: space-between; border-bottom: 2px solid #f5f1ec; padding-right: 10px">
+                <div style="border-bottom: 2px solid rgb(211, 10, 34); color: rgb(211, 10, 34); font-size: 18px;
+                  
+                  padding-left: 8px; padding-right: 8px;  ">
+                  党建工作
+                </div>
+                <div style="cursor: pointer ;font-size: 14px;" onclick='location.href=("/detail.html")'>
+                  <!-- 面包屑 -->
+                  <ul>
+                    <li><a href="#">Home</a></li>
+                  </ul>
+
+                </div>
+              </div>
+
+              <div style="padding-left: 10px; padding-right: 10px">
+                <div style=" border-bottom: 2px solid rgb(245, 241, 236);">
+                  <div style=' 
+                  margin: 10px 0;
+                  font-size: 16px;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          white-space: nowrap;'>
+                    <span style="color: rgb(217,0,27);margin-right: 20px; font-size: 14px;">2023 12 13 </span>
+                    省社会主义学院召开学习贯彻习近平新时代中国特色社会主义思想主题教育总结会VB不不不发送到发顺丰
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="my-element" onmouseover="addHoverClass(this)" onmouseout="removeHoverClass(this)">鼠标悬停时的内容</div>
+    </div>
+  </div>
+  <script>
+    function add() {
+      $('.card_flag_nav_li').style.display = "block";
+      $('.card_flag_nav_li .list-3 ').style.display = "block";
+      // $('.card_flag_nav').classList.add('card_flag_active')
+
+    }
+    add()
+    function addHoverClass(element) {
+      element.classList.add('hovered');
+     
+    }
+
+    function removeHoverClass(element) {
+      element.classList.remove('hovered');
+    }
+  </script>
+</body>
+
+</html>

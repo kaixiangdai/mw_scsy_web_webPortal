@@ -2,161 +2,23 @@
  * @Author: 代凯祥
  * @Date: 2023-12-13 10:10:41
  * @LastEditors: 代凯祥
- * @LastEditTime: 2023-12-15 11:34:48
+ * @LastEditTime: 2023-12-21 09:37:18
  * @FilePath: \mw_scsy_web_webPortal\components\head.html
  * @Description: 
 -->
 <!DOCTYPE html>
 <html>
 <style type="text/css">
-    /*简单的思路就是
-        1.先初始化所有元素
-        2.给div标签大小和背景色
-        3.给左右li标签大小,并float:left
-        4.隐藏二级列表
-        5.控制一级显示二级列表
-        6.设置一些背景色和hover变色
-        7.a标签取消下划线,列表取消样式
-        */
-    * {
-        margin: 0px;
-        padding: 0px;
-    }
-
-    #nav_box {
-        width: auto;
-        background-color: rgb(180, 31, 35);
-    }
-
-    #nav {
-        width: 75%;
-        margin: 0px;
-        padding: 0px;
-        display: flex;
-        margin: 0 auto;
-        justify-content: space-around;
-
-    }
-
-    #nav li {
-        height: 36px;
-        line-height: 36px;
-        list-style: none;
-        text-align: center;
-        z-index: 999
-    }
-
-    #nav .nav-ul {
-        display: none;
-    }
-
-    #nav li:hover {
-        background-color: rgb(163, 6, 11);
-    }
-
-    #nav a {
-        color: white;
-        font-size: 1.8rem;
-        text-decoration: none;
-        padding: 0 10px;
-    }
-
-    #nav li ul {
-        display: none;
-        margin-top: -2px;
-    }
-
-    #nav li ul li {
-        
-        background-color: rgb(187, 52, 56);
-
-    }
-
-    #nav li:hover ul {
-        display: block;
-        z-index: 999
-    }
-
-    #nav li ul li:hover {
-        /* display: block; */
-        background: rgb(174, 34, 39);
-    }
-
-    #input_box {
-        width: 17rem;
-        display: 'flex';
-        justify-content: center;
-        height: 80%;
-        margin: 5px 0 0 0;
-        background-color: rgba(255, 255, 255, 0.3);
-        border-radius: 30px;
-        color: white;
-    }
-
-    #input {
-        width: 13rem;
-        background-color: transparent;
-        color: white;
-        border: 0;
-        border-top-left-radius: 30px;
-        border-bottom-left-radius: 30px;
-        padding-left: 10px;
-        font-size: 14px;
-    }
-
-    .enabled {
-        border: none;
-        padding: 2px 12px;
-        font-size: 14px;
-        line-height: 1.5;
-        background-color: #fff;
-        border-bottom: 1px solid #ccc;
-        outline: none;
-    }
-
-    #input::placeholder {
-        color: #ffffff;
-        /* 设置placeholder颜色 */
-    }
-
-    /* div.first_img img:first-child {
-        width: 100%;
-        height: 27%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    div.first_img img:nth-child(2) {
-        position: absolute;
-        left: 50%;
-        top: 0;
-        transform: translate(-65%, 20px);
-        width: 30vw;
-        height: 20vh;
-    } */
-    div.first_img img:first-child {
-        width: 100%;
-        height: 27%;
-        display: block;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    div.first_img img:nth-child(2) {
-        z-index: 99;
-        width: 30%;
-        position: absolute;
-        left: 30%;
-        top: 20px;
-    }
+   
 </style>
 
 <head>
- 
+
     <script src="https://cdn.staticfile.org/jquery/3.6.0/jquery.min.js"></script>
+    <link rel="stylesheet/less" href='head.less'>
+    <script type="text/javascript" src='http://cdnjs.cloudflare.com/ajax/libs/less.js/3.11.1/less.min.js'></script>
     <script>
-   
+
     </script>
 </head>
 
@@ -179,6 +41,15 @@
                     <li><a href="#">机构设置</a></li>
                     <li><a href="#">校园风光</a></li>
                     <li><a href="#">地理位置</a></li>
+                    <li><a href="#">地理位置</a>
+                        <ul>
+                            <li><a href="#">风雨哈佛路</a></li>
+                            <li><a href="#">肖申克的救赎</a></li>
+                            <li><a href="#">阿甘正传</a></li>
+                            <li><a href="#">当幸福来敲门</a></li>
+                        </ul>
+
+                    </li>
                 </ul>
             </li>
             <li><a href="#">新闻中心</a>
@@ -208,7 +79,7 @@
             <li><a href="#">中华文化学院</a>
                 <ul class="nav-ul">
                     <li><a href="#">文化交流</a></li>
-                    <li><a href="#">同心书画院</a></li>
+                    <li><a href="#">同心书画院民营企业家学院</a></li>
                 </ul>
             </li>
             <li><a href="#">民营企业家学院</a>
@@ -226,7 +97,13 @@
             </li>
             <div id="input_box">
                 <input type="text" placeholder='请输入搜索内容' id="input" class="enabled text-info" />
-                丨 <svg style='cursor:pointer; vertical-align:middle ;margin-left: -5;margin-bottom: 2px;'  t="1702610547853" class="icon" viewBox="0 0 1024 1024" version="1.1" xmlns="http://www.w3.org/2000/svg" p-id="1511" width="16" height="16"><path d="M884.48 849.92l-128-128a378.24 378.24 0 1 0-90.24 90.24l128 128a64 64 0 0 0 90.24-90.24zM275.2 682.24a247.68 247.68 0 1 1 350.72 0 248.32 248.32 0 0 1-350.72 0z" fill="#ffffff" p-id="1512"></path></svg></i>
+                丨 <svg style='cursor:pointer; vertical-align:middle ;margin-left: -5;margin-bottom: 2px;'
+                    t="1702610547853" class="icon" viewBox="0 0 1024 1024" version="1.1"
+                    xmlns="http://www.w3.org/2000/svg" p-id="1511" width="16" height="16">
+                    <path
+                        d="M884.48 849.92l-128-128a378.24 378.24 0 1 0-90.24 90.24l128 128a64 64 0 0 0 90.24-90.24zM275.2 682.24a247.68 247.68 0 1 1 350.72 0 248.32 248.32 0 0 1-350.72 0z"
+                        fill="#ffffff" p-id="1512"></path>
+                </svg></i>
             </div>
         </ul>
     </div>

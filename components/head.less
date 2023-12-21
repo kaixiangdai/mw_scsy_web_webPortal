@@ -1,0 +1,188 @@
+ /*简单的思路就是
+        1.先初始化所有元素
+        2.给div标签大小和背景色
+        3.给左右li标签大小,并float:left
+        4.隐藏二级列表
+        5.控制一级显示二级列表
+        6.设置一些背景色和hover变色
+        7.a标签取消下划线,列表取消样式
+        */
+ * {
+   margin: 0px;
+   padding: 0px;
+ }
+
+ #nav_box {
+   width: auto;
+   background-color: rgb(180, 31, 35);
+ }
+
+ #nav {
+   width: 75%;
+   margin: 0px;
+   padding: 0px;
+   display: flex;
+   margin: 0 auto;
+   justify-content: space-around;
+
+ }
+
+ #nav li {
+   height: 36px;
+   line-height: 36px;
+   list-style: none;
+   text-align: center;
+   z-index: 999;
+   float: left;
+   position: relative;
+ }
+
+ #nav .nav-ul {
+   display: none;
+ }
+
+ #nav li:hover {
+   background-color: rgb(163, 6, 11);
+ }
+
+ #nav a {
+   color: white;
+   font-size: 1.8rem;
+   text-decoration: none;
+   padding: 0 10px;
+ }
+
+ #nav li ul {
+   display: none;
+   margin-top: -2px;
+   display: flex;
+   justify-content: center;
+ }
+
+ #nav li ul {
+
+   background-color: rgb(187, 52, 56);
+
+ }
+
+ #nav li ul li a {
+
+   text-align: center;
+ }
+
+ #nav li:hover ul {
+   display: block;
+   z-index: 999
+ }
+
+ #nav li ul li:hover {
+   /* display: block; */
+   background: rgb(174, 34, 39);
+ }
+
+ #input_box {
+   width: 17rem;
+   display: 'flex';
+   justify-content: center;
+   height: 80%;
+   margin: 5px 0 0 0;
+   background-color: rgba(255, 255, 255, 0.3);
+   border-radius: 30px;
+   color: white;
+ }
+
+ #input {
+   width: 13rem;
+   background-color: transparent;
+   color: white;
+   border: 0;
+   border-top-left-radius: 30px;
+   border-bottom-left-radius: 30px;
+   padding-left: 10px;
+   font-size: 14px;
+ }
+
+ .enabled {
+   border: none;
+   padding: 2px 12px;
+   font-size: 14px;
+   line-height: 1.5;
+   background-color: #fff;
+   border-bottom: 1px solid #ccc;
+   outline: none;
+ }
+
+ #input::placeholder {
+   color: #ffffff;
+   /* 设置placeholder颜色 */
+ }
+
+ /* div.first_img img:first-child {
+          width: 100%;
+          height: 27%;
+          display: block;
+          margin-left: auto;
+          margin-right: auto;
+      }
+  
+      div.first_img img:nth-child(2) {
+          position: absolute;
+          left: 50%;
+          top: 0;
+          transform: translate(-65%, 20px);
+          width: 30vw;
+          height: 20vh;
+      } */
+ div.first_img img:first-child {
+   width: 100%;
+   height: 27%;
+   display: block;
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+ div.first_img img:nth-child(2) {
+   z-index: 99;
+   width: 30%;
+   position: absolute;
+   left: 30%;
+   top: 20px;
+ }
+
+
+
+ #nav li ul {
+   display: none;
+   position: absolute;
+   top: 38px;
+   left: 0px;
+ }
+
+ #nav li:hover ul li ul {
+   display: none;
+ }
+
+ #nav li ul li ul {
+   position: absolute;
+   top: 0px;
+   /* left: 100px; */
+
+ }
+
+ #nav li ul li ul li {
+   width: 100%;
+   white-space: nowrap;
+ }
+
+ #nav li ul li {
+   position: relative;
+ }
+
+ #nav li ul li:hover ul {
+   display: block;
+ }
+
+ #nav li ul li ul li:hover {
+   background: rgb(174, 34, 39);
+
+ }
